@@ -1,0 +1,27 @@
+@mixin responsive($breakpoint){
+    @if $breakpoint == 'mobile'{
+        @media (max-width: 576px){
+            @content;
+        }
+    }
+    @if $breakpoint == 'tablet'{
+        @media (max-width: 768px){
+            @content;
+        }
+    }
+    @if $breakpoint == 'screen'{
+        @media (min-width: 768px){
+            @content;
+        }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow {
+    box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+}

@@ -1,0 +1,110 @@
+.intake #cvsFile{
+    display: none;
+}
+
+.intake{
+    &__container{
+        position: relative;
+        & a{
+            display: inline-block;
+        }
+    }
+
+    &__list{
+        @include responsive('screen'){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: .75rem;
+        }
+    }
+
+    &__fullreport input:focus, textarea:focus, select:focus {
+        outline: .12rem solid $primary !important;
+        border-radius: .5rem;
+    }
+
+    &__card{
+        position: relative;
+        padding: 1rem;
+        background: $white;
+        box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+        border-radius: 12px;
+        width: 100%;
+
+    }
+    &__input{
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(8, 1fr);
+        align-items: center;
+        margin-bottom: .5rem;
+
+        & label{font-size: .9rem;}
+        & .label-title{font-size: 1rem;}
+
+        & label, .label-title{
+            grid-column: span 3;
+            padding-right: .5rem;
+        }
+        & .input-text{
+            grid-column: span 5;
+            padding: .5rem;
+        }
+        & input{
+            grid-column: span 5;
+            padding: .7rem .5rem;
+            border: none;
+            background: $input;
+            border-radius: .5rem;
+            position: relative;
+            right: 0;
+        }
+        
+        
+    }
+    &__left{
+        border-right: 1px solid $medium-grey;
+        padding-right: 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & p{
+            font-size: .8rem;
+            line-height: 1.2rem;
+        }
+    }
+    &__right{
+        padding-left: 1rem;
+        & p{
+            font-size: .7rem;
+            line-height: 1.1rem;
+        }
+    }
+}
+
+.boton-intake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & a{width: 50px;
+        height: 50px;
+        padding: .5rem;
+    }
+    & button{width: 40px;
+        height: 40px;
+        padding: .4rem;}
+
+    & a, button{
+        display: inline-block;
+        background: $light-grey;
+        border-radius: 50%;
+
+        svg{
+            fill: $primary;
+        }
+    }
+}

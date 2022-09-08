@@ -1,0 +1,96 @@
+.login-bg{
+    /* background: linear-gradient(180deg, rgba(43,45,61,1) 35%, rgba(24,26,42,1) 100%); */
+    background: linear-gradient(225deg, rgba(72,127,37,1) 0%, rgba(1,68,84,1) 69%);
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $white;
+}
+
+/*===== FORM =====*/
+
+.logo{max-width: 150px;}
+
+.l-form{
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form .btn-primary{margin: auto !important; width: 100%;}
+.form{
+  width: 330px;
+  padding: 3rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 1rem;
+  /* background-color: $white; */
+  /* box-shadow: 0 10px 25px rgba(92, 99, 105, .2); */
+
+  &__div{
+      position: relative;
+      height: 48px;
+  }
+  &__input{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid $white;
+      /* border-radius: .5rem; */
+      color: $white;
+      outline: none;
+      padding: 1rem;
+      background: none;
+      z-index: 1;
+  }
+  &__label{
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      color: $white;
+      padding: 0 .25rem;
+      /* background-color: #fff; */
+      font-size: 1rem;
+      transition: .3s;
+  }
+}
+
+/*Input focus move up label*/
+.form__input:focus + .form__label {
+  top: -.5rem;
+  left: .8rem;
+  font-size: .75rem;
+  font-weight: 500;
+  z-index: 10;
+  color: $green;
+  background: none;
+  background-color: none;
+}
+
+/*Input focus sticky top label*/
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -.5rem;
+  left: .8rem;
+  z-index: 10;
+  font-size: .75rem;
+  font-weight: 500;
+  background: none;
+  background-color: none;
+}
+
+/*Input focus*/
+.form__input:focus {
+  border: none;
+  border-bottom: 1.5px solid $green;
+  background: none;
+  background-color: none;
+}
+
+.form__input::placeholder {
+  color: rgba($color: $white, $alpha: .2);
+}

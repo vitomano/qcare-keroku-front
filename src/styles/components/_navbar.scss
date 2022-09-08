@@ -1,0 +1,322 @@
+.navbar{
+    background: linear-gradient(225deg, rgba(72,127,37,1) 0%, rgba(1,68,84,1) 69%);
+    padding-bottom: 3.5rem;
+
+    &__container{
+        max-width: 1200px;
+        margin: auto;
+        padding: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo{
+        width: 80px;
+    }
+
+    &__list{
+        display: flex;
+        z-index: 10000;
+        background: rgba(0, 0, 0, 1);
+        position: fixed;
+        /* inset: 0; */
+        top: 0;
+        bottom: 0;
+        left: 20%;
+        right: 0;
+
+        transform: translate(100%, 0);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        transition: transform .2s ease;
+
+        input{
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .navbar__list {
+            display: none;
+        }
+
+    }
+
+
+
+    &__item{
+        color: $white;
+        font-size: 1.5rem;
+    }
+
+    &__profile{
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+
+    & li:nth-child(3){
+        font-size: .8rem;
+        color: rgb(149, 149, 149);
+    }
+
+    &__menu{
+        display: flex;
+
+        input{
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .navbar__list{
+            transform: translate(0, 0);
+        }
+
+        i{
+            color: $white;
+            font-size: 1.5rem;
+            display: inline-block;
+            transition: all .2s ease;
+        }
+    }
+
+
+}
+
+.lines-icon{
+    margin-right: .5rem;
+    img{
+        width: 25px;
+    }
+}
+
+.close-icon{
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: all .2s ease;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+
+    img{
+        width: 25px;
+    }
+}
+
+
+/* BAR */
+
+.new{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    color: $primary;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+
+    & svg{
+        width: 30px;
+        fill: $primary;
+    }
+}
+
+.bar{
+    position: absolute;
+    top: 6rem;
+    z-index: 8000;
+    width: 100%;
+    height: 65px;
+    border-radius: 2rem 0rem;
+    background: $white;
+    color: $primary;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+
+    &__grid{
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+        // grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        padding: 0 .5rem;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        & .img-icon{
+            width: 22px;
+        }
+        & p{
+            font-size: .6rem;
+            color: $primary-clear;
+        }
+
+    }
+
+    & svg{
+        width: 30px;
+        fill: $primary;
+    }
+}
+
+.mas-icon{
+    width: 45px;
+}
+
+
+
+
+.searching{
+
+    &__logo{
+        width: 80px;
+    }
+
+    &__list{
+        display: flex;
+        z-index: 8000;
+        background: $white;
+        box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+        position: fixed;
+        width: 500px;
+        max-width: 85%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        transform: translate(100%, 0);
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+
+        transition: transform .2s ease;
+
+        input[type="checkbox"]{
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .searching__list {
+            display: none;
+        }
+
+    }
+
+    &__item{
+        color: $white;
+        font-size: 1.5rem;
+    }
+
+    &__menu{
+        display: flex;
+
+        input[type="checkbox"]{
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .searching__list{
+            transform: translate(0, 0);
+        }
+
+        i{
+            color: black;
+            font-size: 1.5rem;
+            display: inline-block;
+            transition: all .2s ease;
+        }
+    }
+}
+
+.filter-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5rem;
+    width: 100%;
+
+    @include responsive('screen'){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.score-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5rem;
+    width: 100%;
+
+    @include responsive('screen'){
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.filter-btn{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+    border-radius: .6rem;
+    font-size: .7rem;
+    background-color: $input;
+    border: 1px solid $input;
+
+    transition: all .3s ease;
+}
+
+.score-btn.filter-selected, .filter-btn.filter-selected{
+    background-color: $white;
+    border: 1px solid $green-secondary;
+    color: $green-secondary;
+    box-shadow: 0px 7px 14px -8px rgba(129,143,132, .6);
+}
+
+.filter-input{
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+    & input[type="text"]{
+        flex: 1;
+        background-color: $input;
+        padding: 0.7rem 0.5rem;
+        border: none;
+        border-radius: .5rem;
+    }
+
+    & button{
+        min-width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $green-secondary;
+
+        & img{
+            width: 10px;
+        }
+    }
+}
+
+.clear-filter{
+    font-size: .8rem;
+    background-color: #FF4D4D;
+    border-radius: 1rem;
+    color: #FFDBDB;
+    padding: .4rem;
+    box-shadow: 0px 10px 14px -8px rgb(218, 116, 116);
+}

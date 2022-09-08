@@ -1,0 +1,175 @@
+
+.upload{
+
+    input[type="text"], textarea{
+        max-width: 100%;
+        min-width: 100%;
+        background: rgb(222, 226, 235);
+        border: 1px solid transparent;
+        font-family: $font-text;
+        border-radius: 12px;
+        padding: .8rem .5rem;
+    }
+
+}
+.upload input[type="file"]{
+    display: none;
+}
+
+.upload-label{
+    cursor: pointer;
+    border: 1px solid $primary;
+    padding: .5rem 0;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+
+    & svg{
+        width: 30px;
+        fill: $primary;
+        margin-right: .5rem;
+    }
+    & img{
+        width: 30px;
+        margin-right: .5rem;
+    }
+}
+
+progress{
+    color: $primary;
+    padding: 1rem 0;
+}
+
+.excel{
+    background: $excel;
+    color: $white;
+    border: none;
+    & svg{
+        width: 30px;
+        fill: $white;
+        margin-right: .5rem;
+    }
+}
+
+
+/* TOGGLE */
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+
+    & input[type=checkbox]{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    & .slider{
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: $input;
+        border-radius: 1rem;
+    }
+
+    & .slider:before{
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        bottom: 3px;
+        margin-left: 4px;
+        background-color: white;
+        transition: .4s ease;
+        border-radius: 50%;
+    }
+
+    & input:checked + .slider{
+        background-color: $green;
+    }
+
+    & input:checked + .slider:before{
+        transform: translateX(54px);
+    }
+}
+
+.add-file{
+    cursor: pointer;
+    border: 1px solid $primary;
+    margin: .8rem auto;
+    padding: .3rem .7rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    background: none;
+
+    & svg{
+        width: 25px;
+        height: 25px;
+        fill: $primary;
+        margin-right: .5rem;
+    }
+    & img{
+        width: 25px;
+        height: 25px;
+        margin-right: .5rem;
+    }
+
+    & span{
+        font-size: 13px;
+    }
+}
+
+
+.span-horizontal{
+    min-width: 60px !important;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.span-horizontal.small-text{
+    font-size: 10px;
+}
+
+
+.flex-h{
+    overflow-x: scroll;
+}
+
+.flex-samples{
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.samples-box{
+    position: relative;
+    flex: 1;
+}
+
+.plus-box{
+    position: absolute;
+    right: -5rem;
+}
+
+.plus-add{
+    text-align: end;
+}
+
+.plus-btn{
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    background-color: $green;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}

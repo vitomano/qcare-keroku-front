@@ -1,0 +1,90 @@
+.date-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.date-input {
+    width: 95%;
+    z-index: 10000;
+    background-color: $input;
+    border: 1px solid transparent;
+    padding: .7rem .5rem;
+    border-radius: .5rem;
+
+    &.date-filter{
+    width: 100%;
+
+    }
+
+    &:focus {
+        border: 1px solid $primary;
+        outline: none;
+    }
+
+}
+
+.react-datepicker__close-icon {
+    padding: 0;
+}
+
+.react-datepicker__close-icon::after {
+    background: $primary  !important;
+    height: 22px;
+    width: 22px;
+}
+
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+    background-color: $primary;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    background-color: $green;
+}
+
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range),
+.react-datepicker__month-text--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range),
+.react-datepicker__quarter-text--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range),
+.react-datepicker__year-text--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range) {
+    background-color: lighten($color: $primary, $amount: 50);
+}
+
+.status-grid{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: .5rem;
+    & div{
+        margin: auto;
+        flex: 1;
+        text-align: center;
+        font-size: .7rem;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+    & .stat-pending{
+        background-color: lighten($color: $medium-grey, $amount: 37);
+        color: $medium-grey;
+    }
+    & .stat-in-process{
+        background-color: lighten($color: orange, $amount: 35);
+        color: rgb(221, 129, 0);
+    }
+    & .stat-done{
+        background-color: lighten($color: $check, $amount: 30);
+        color: $green-secondary;
+    }
+}

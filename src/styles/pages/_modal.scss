@@ -1,0 +1,245 @@
+.modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background: rgba($color: $black, $alpha: .8);
+    z-index: 9000;
+
+    &__card {
+        position: relative;
+        border-radius: 1rem;
+        min-height: 200px;
+        width: 95%;
+        max-width: 320px;
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+
+    }
+
+    &__cardPDF {
+        background: $white;
+        width: 90%;
+        border-radius: 1rem;
+        max-height: 90%;
+        overflow-y: auto;
+        padding: 2rem 1rem;
+
+        @include responsive('screen') {
+            width: auto;
+            max-width: 95%;
+        }
+
+    }
+
+
+    &__botones {
+        display: flex;
+        justify-content: center;
+
+        & .modal-btn {
+            width: 6rem;
+            padding: .8rem 0;
+            border-radius: .5rem;
+            flex: 1;
+        }
+
+        & .btn-close {
+            background: none;
+            border: 1px solid rgb(220, 31, 31);
+            color: rgb(220, 31, 31);
+        }
+
+        & .btn-add {
+            background: $green;
+        }
+        & .btn-muted {
+            background: rgb(225, 225, 225);
+        }
+
+        & .btn-remove {
+            background: none;
+            border: 1px solid rgb(220, 31, 31);
+            color: rgb(220, 31, 31);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & label {
+            margin-bottom: .2rem;
+        }
+
+        & input {
+            background: $input;
+            border: none;
+            border-radius: .5rem;
+            padding: .8rem .5rem;
+            width: 100%;
+        }
+
+        & .modal-label {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.modal-add {
+    background: none;
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+
+    & div {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.next-prev {
+    position: absolute;
+    width: 95%;
+
+    display: flex;
+    justify-content: space-between;
+
+    & img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        cursor: pointer;
+
+        @include responsive('screen') {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+}
+
+.index-float {
+    position: fixed;
+    bottom: 1rem;
+    z-index: 12000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        color: white;
+        font-weight: bold;
+    }
+
+    // width: 100px;
+    // height: 100px;
+    // background: red;
+}
+
+.delete-img {
+    font-size: .8rem;
+    background-color: #FF4D4D;
+    border-radius: 1.5rem;
+    color: #FFDBDB;
+    padding: .7rem 1rem;
+    font-size: 1rem;
+
+    position: fixed;
+    z-index: 9500;
+    left: 25px;
+    top: 15px;
+
+    transition: all .2s ease;
+
+    &:hover {
+        box-shadow: 0px 10px 14px -8px rgb(218, 116, 116);
+    }
+}
+
+
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 160px));
+
+    @include responsive('screen') {
+        grid-template-columns: repeat(5, minmax(auto, 160px));
+    }
+}
+
+.modalPDF {
+
+    cursor: pointer;
+
+    &__container {
+        position: relative;
+        height: 100px;
+
+        @include responsive('screen') {
+            height: 160px;
+        }
+
+        & .box-checked {
+            position: absolute;
+            width: 1.2rem;
+            height: 1.2rem;
+            padding: .2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: .5rem;
+            left: .5rem;
+        }
+
+        & .check-on {
+            background: $check;
+            border: 1px solid $check;
+            box-shadow: rgba(0, 255, 64, 0.2) 0px 8px 12px;
+        }
+
+        & .check-off {
+            background: none;
+            border: 1.5px solid $white;
+        }
+    }
+
+    & input[type=checkbox] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.img-trans {
+    opacity: .4;
+}
+
+.multiColumn {
+    column-count: 2;
+}
+
+.column-index {
+    width: 30px;
+    font-size: .8rem;
+    color: #a4a4a4;
+}

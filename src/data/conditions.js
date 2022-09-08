@@ -1,0 +1,23 @@
+export const conditionsData = [
+    "Rot",
+    "Mold",
+    "Decay ",
+    "Sensitive",
+    "Fruit easily broken to touch",
+    "Soft fruit",
+    "Overripe",
+    "Leaking",
+    "Heavy leaking",
+    "Crumbled berries",
+    "Water cells",
+    "Heavy water cells",
+    "Mold hotspot",
+    "Rot hotspot",
+    "Grub presence",
+    "Red drupplets",
+    "Shrivelling",
+    "Exudated berries",
+    "Wounds ",
+    "Cracking",
+    "Heavy cracking"
+]

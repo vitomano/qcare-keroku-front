@@ -1,0 +1,42 @@
+
+.pagination{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    
+    &__container{
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+.pag-btn{
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .3rem;
+    padding: 0 .2rem;
+    border-radius: 1rem;
+
+    p{
+        font-size: .9rem;
+        text-align: center;
+    }
+}
+
+.pag-hl{
+    background: $green-secondary;
+    box-shadow: 0 8px 16px 0 rgba(116, 118, 120, 0.249);
+
+    & p{
+        color: $white;
+    }
+}
+.pag-w{background: white;}
+.pag-g{background: $input;}

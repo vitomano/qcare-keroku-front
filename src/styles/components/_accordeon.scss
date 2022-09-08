@@ -1,0 +1,69 @@
+.card-accordeon{
+    background: $white;
+    box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+    border-radius: 12px;
+
+    & .pallet-item{
+        color: $green;
+    }
+}
+
+.accordeon{
+    height: auto;
+    max-height: 60px;
+    overflow: hidden;
+    transition: all .3s cubic-bezier(0,1,0,1);
+
+    // @include responsive('screen'){
+    //     height: auto ;
+    //     max-height: 9999px ;
+    // }
+}
+.accordeon.show{
+    height: auto ;
+    max-height: 9999px ;
+    transition: all .3s cubic-bezier(0,1,0,1);
+}
+.accordeon-edit{
+    cursor: pointer;
+}
+.accordeon-pallet{
+    display: flex;
+    align-items: center;
+}
+
+.accordeon-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & img{
+        width: 1rem;
+
+        // @include responsive('screen'){
+        //     display: none;
+        // }
+    }
+
+    .chevron-up{
+        transform: rotate(0);
+        transition: transform .2s ease;
+    }
+
+    .chevron-down{
+        transform: rotate(180deg);
+        transition: transform .2s ease;
+    }
+}
+
+.accordeon-table{
+    position: relative;
+}
+
+.accordeon-edit{
+    width: 1rem;
+    background: none;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}

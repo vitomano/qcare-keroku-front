@@ -1,0 +1,117 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+body{font-family: 'Roboto', sans-serif; background: #F6F8FA;}
+
+img{max-width: 100%;}
+li{list-style: none;}
+
+
+p, .p, strong, .strong{
+    color: $text;
+    font-size: 1rem; 
+    line-height: 1.5rem;}
+
+.text-white{color: $white !important;}
+.text-clear{color: $medium-grey !important;}
+
+h1, h2, h3, h4,.h1, .h2, .h3, .h4{
+    font-family: $font-title;
+    font-weight: 700;
+    color: $text;
+}
+
+h1, .h1{font-size: 2rem;}
+h2, .h2{font-size: 1.5rem;}
+h3, .h3{font-size: 1.15rem;}
+h4, .h4{font-size: 1rem;}
+
+.bold{font-weight: 900;}
+
+a, button{text-decoration: none; color: inherit;}
+button { border:none; background: none; font-size: 1rem;font-weight: 500;} 
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    // padding: 0 1.2rem;
+}
+.container-1000{
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    // padding: 0 1.2rem;
+}
+
+.w-100{width: 100%;}
+.text-center{text-align: center;}
+
+.cursor, button{cursor: pointer;}
+
+.content{
+    background: #F6F8FA;
+    padding: 4rem 1.2rem;
+    margin-top: -1.5rem;
+    //border-radius: 1.5rem;
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+}
+
+.main-title{
+    font-size: 1.2rem;
+}
+
+button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.font-xsmall{font-size: $xsmall !important; line-height: 8px !important;}
+.font-small{font-size: $small !important; line-height: 1rem;}
+.font-normal{font-size: $normal !important; line-height: normal !important;}
+.font-medium{font-size: $medium !important;}
+.font-large{font-size: $large !important;}
+.font-xl{font-size: $xl !important;}
+.font-xxl{font-size: $xxl !important;}
+
+.content-flex{display: flex;}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-space-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shadow {
+    box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+}
+
+.toast{
+    z-index: 21000 !important;
+}
+
+.color-primary{color: $primary-clear;}
+
+.border-b{border-bottom: 0.5px solid #bdbdbd;}
+.border-t{border-top: 0.5px solid #bdbdbd;}
+.bg-grey{background: $input}
+.border-round{border-radius: 1.5rem;}

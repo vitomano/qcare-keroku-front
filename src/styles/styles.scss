@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@100;400;700&display=swap');
+
+//Base
+@import './base/variables';
+@import './base/base';
+@import './base/margin';
+@import './base/mixin';
+
+
+//Layout
+@import './layout/grid';
+@import './layout/forms';
+@import './layout/range';
+
+
+//Components
+@import './components/buttons';
+@import './components/navbar';
+@import './components/spinner';
+@import './components/accordeon';
+@import './components/pagination';
+
+//Pages
+@import './pages/login';
+@import './pages/notfound';
+@import './pages/reports';
+@import './pages/newreport';
+@import './pages/fruit';
+@import './pages/user';
+@import './pages/intake';
+@import './pages/search';
+@import './pages/modal';
+@import './pages/lifetest';
+@import './pages/prereports';

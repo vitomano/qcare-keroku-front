@@ -1,0 +1,78 @@
+.prereport-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: .5rem;
+    box-shadow: rgba(113, 159, 206, 0.2) 0px 8px 24px;
+
+    & .grower-margin {
+        &>div:not(:last-child) {
+            margin-bottom: .4rem;
+        }
+    }
+
+    &__date {
+        border: 1px solid $input;
+        font-size: 10px;
+        line-height: normal;
+        padding: .1rem .3rem;
+        border-radius: .5rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        & .boxes-grower {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(226, 229, 235, 0.438);
+            height: 1.8rem;
+            border-radius: .5rem;
+            padding: 0 .5rem;
+
+           
+        }
+
+        & .grade,
+        .action {
+            width: 22%;
+            max-width: 5rem;
+
+            & p {
+                font-size: .65rem;
+                line-height: .8rem;
+                text-align: center;
+            }
+
+            & div {
+                height: 1.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: .5rem;
+                padding: 0 .5rem;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+
+        & h4 {
+            font-size: 15px;
+        }
+    }
+}
+
+.duration{
+    width: auto;
+    background: $light-green;
+    padding: .1rem .5rem;
+    border-radius: 1rem;
+}

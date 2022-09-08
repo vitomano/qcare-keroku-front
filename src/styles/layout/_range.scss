@@ -1,0 +1,110 @@
+.range{
+
+    &__label{
+        font-size: .9rem;
+        font-weight: 700;
+    }
+
+    &__div{
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__left, &__right{
+        font-size: .7rem;
+        width: 20px;
+        text-align: center;
+        margin: auto;
+    }
+
+    
+    // & input[type=range]{
+    //     flex: 1;
+    //     margin: 0 .3rem;
+    // }
+
+}
+
+.input-pallet{
+    display: flex;
+    margin-bottom: .5rem;
+    // overflow: scroll;
+    width: 100%;
+
+    & .label-name {
+        min-width: 50%;
+        font-size: .9rem;
+        display: flex;
+        align-items: center;
+        margin-right: .5rem;
+
+        //static label
+        position: sticky;
+        left: 0;
+        background-color: white;
+        z-index: 500;
+
+    }
+
+    & .label-name-up {
+        width: 50%;
+        font-size: .9rem;
+        display: flex;
+        align-items: flex-start;
+        margin-right: .5rem;
+        padding-top: .5rem;
+
+        //static label
+        position: sticky;
+        left: 0;
+        background-color: white;
+        z-index: 500;
+    }
+
+    & .input-type{
+        flex-grow: 1;
+        width: 50%;
+
+        & input{
+            width: 100%;
+        }
+
+        & input[type=text], input[type=number]{
+            border: 1px solid $light-grey;
+            // background: $input;
+            border-radius: .5rem;
+            padding: .5rem;
+        }
+    }
+}
+
+.input-range{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & input[type=range]{
+        width: 80%;
+    }
+    & .span-range{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: .7rem;
+        background-color: $input;
+    } 
+
+    & .span-checkbox{
+        font-size: .8rem;
+        padding-right: .2rem;
+        color: $dark-grey;
+    }
+}
+
+.check-on-off{
+        margin-right: .4rem;
+    }

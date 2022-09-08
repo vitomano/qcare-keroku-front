@@ -1,0 +1,101 @@
+.edit__input input{
+    display: block;
+    width: 100%;
+    padding: .7rem .5rem;
+    border: none;
+    margin-top: .3rem;
+    margin-bottom: 1.5rem;
+    background: $input;
+    border-radius: .5rem;
+}
+.modal-container{
+    min-width: 90%;
+    flex: 1;
+}
+
+.share-email, .share-email{
+
+    position: relative;
+
+    @include responsive('screen'){
+        width: 500px;
+    }
+
+    & input, textarea{
+        display: block;
+        padding: .7rem .5rem;
+        border: none;
+        width: 100%;
+        background: $input;
+        border-radius: .5rem;
+    }
+}
+
+
+.cc-container{
+    display: flex;
+    align-items: center;
+}
+
+.cc-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $button-color;
+    color: #fff;
+}
+
+.tags-input {
+	display: flex;
+	align-items: center;
+    flex: 1;
+	// align-items: flex-start;
+	flex-wrap: wrap;
+	border-radius: 6px;
+    background: $input;
+
+	input {
+		flex: 1;
+		border: none;
+		font-size: 14px;
+		// padding: 4px 0 0 0;
+		&:focus {
+			outline: transparent;
+		}
+	}
+}
+
+#tags {
+	display: flex;
+	flex-wrap: wrap;
+	padding: .2rem
+	// margin: 8px 0 0 0;
+}
+
+.tag {
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 14px;
+	list-style: none;
+	border-radius: 6px;
+	margin: 4px;
+    padding: .2rem .4rem;
+	background: $button-color;
+
+	.tag-close-icon {
+		display: block;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		text-align: center;
+		font-size: 14px;
+		margin-left: 8px;
+		color: #0052cc;
+		border-radius: 50%;
+		background: #fff;
+		cursor: pointer;
+	}
+}
